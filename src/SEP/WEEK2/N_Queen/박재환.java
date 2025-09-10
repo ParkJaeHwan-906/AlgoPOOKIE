@@ -42,25 +42,25 @@ public class 박재환 {
         }
     }
 
-    static int[] dx = {-1,-1,-1};
-    static int[] dy = {0,1,-1};
-    // 현 위치가 안전한지 확인
-    static boolean isSafe(int x, int y) {
-        for(int dir=0; dir<3; dir++) {  // 탑다운 형식으로 탐색하므로, 현재 위치에서 위쪽만 탐색하면 됨
-            int nx = x + dx[dir];
-            int ny = y + dy[dir];
-            while(isBoard(nx, ny)) {
-                if(board[nx][ny]) return false;
-                nx += dx[dir];
-                ny += dy[dir];
-            }
-        }
-        return true;
-    }
-
-    static boolean isBoard(int x, int y) {
-        return !(x < 0 || y < 0 || x >= boardSize || y >= boardSize);
-    }
+//    static int[] dx = {-1,-1,-1};
+//    static int[] dy = {0,1,-1};
+//    // 현 위치가 안전한지 확인
+//    static boolean isSafe(int x, int y) {
+//        for(int dir=0; dir<3; dir++) {  // 탑다운 형식으로 탐색하므로, 현재 위치에서 위쪽만 탐색하면 됨
+//            int nx = x + dx[dir];
+//            int ny = y + dy[dir];
+//            while(isBoard(nx, ny)) {
+//                if(board[nx][ny]) return false;
+//                nx += dx[dir];
+//                ny += dy[dir];
+//            }
+//        }
+//        return true;
+//    }
+//
+//    static boolean isBoard(int x, int y) {
+//        return !(x < 0 || y < 0 || x >= boardSize || y >= boardSize);
+//    }
 
     static boolean isSafe(int x, int y) {
         // 위쪽 방향 탐색
